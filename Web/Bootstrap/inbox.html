@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <!-- Content here -->
+                <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                    <div class="container">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="inbox.html">Mailman</a>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href="login.html">Logout<span class="sr-only">(current)</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-9">
+                    <h1>Inbox</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="list-group">
+                        <a href="composeNewMessage.html" class="list-group-item list-group-item-action list-group-item-info">Compose New Message</a>
+                        <a href="inbox.html" class="list-group-item list-group-item-action justify-content-between active">Inbox<span class="badge badge-default badge-pill">3</span></a>
+                        <a href="starred.html" class="list-group-item list-group-item-action justify-content-between">Starred<span class="badge badge-default badge-pill">1</span></a>
+                        <a href="trash.html" class="list-group-item list-group-item-action justify-content-between">Trash<span class="badge badge-default badge-pill">2</span></a>
+                        <a href="spam.html" class="list-group-item list-group-item-action justify-content-between">Spam<span class="badge badge-default badge-pill">1</span></a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Sender</th>
+                                <th>Title</th>
+                                <th>Received</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-weight-bold">
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>This message sucks</td>
+                                <td>January 30, 2017</td>
+                            </tr>
+                            <tr class="font-weight-bold">
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option2" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>A sorry excuse for a message</td>
+                                <td>January 29, 2017</td>
+                            </tr>
+                            <tr class="font-weight-bold">
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option3" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>Hey</td>
+                                <td>January 28, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>Hi there!</td>
+                                <td>January 26, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>Need Help!!</td>
+                                <td>January 26, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>You Busy?</td>
+                                <td>January 24, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>Lets grab lunch!</td>
+                                <td>January 22, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>What time is your flight?</td>
+                                <td>January 15, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option4" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>Second message</td>
+                                <td>January 27, 2017</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                        </label>
+                                    </div>                                
+                                </th>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input star" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+                                            <img src="images/star.png"/>
+                                        </label>
+                                    </div>  
+                                </th>
+                                <td>Matthew Fritz</td>
+                                <td>First message</td>
+                                <td>January 27, 2017</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-primary">Mark as Read</button>
+                </div>
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-warning">Mark as Spam</button>
+                </div>    
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            
+            
+        </div> <!-- END CONTAINER -->
+        
+        
+    
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </body>
+</html> 

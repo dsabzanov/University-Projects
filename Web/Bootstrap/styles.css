@@ -1,0 +1,13 @@
+label > .star{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > .star + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+    margin-left: -24px;
+    margin-top: -5px;
+}
+label > .star:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  background-image: url(images/starred.png);
+}
