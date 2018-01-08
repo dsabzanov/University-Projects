@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Hangman</title>
+        
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="normalize.css"/>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row justify-content-center" id="hangman">
+                    <h1>Simple Hangman</h1>
+            </div>
+            <div class="row justify-content-center">
+                    <img id="body" src="images/base.png"/>
+            </div>
+            <div class="row justify-content-center">
+                    <!--<p id="finalMsg"></p>-->
+                    <div id="finalMsg" class="row-top-margin"></div>
+            </div>
+            <div class="row justify-content-center">
+                    <span id="word">Word: </span>
+            </div>
+            <div class="row justify-content-center">
+                    <span id="misses">Misses: 0/7</span>
+            </div>
+            
+            <div class="row justify-content-center" id="row1">
+                    <button class="letter btn btn-secondary">Q</button>
+                    <button class="letter btn btn-secondary">W</button>
+                    <button class="letter btn btn-secondary">E</button>
+                    <button class="letter btn btn-secondary">R</button>
+                    <button class="letter btn btn-secondary">T</button>
+                    <button class="letter btn btn-secondary">Y</button>
+                    <button class="letter btn btn-secondary">U</button>
+                    <button class="letter btn btn-secondary">I</button>
+                    <button class="letter btn btn-secondary">O</button>
+                    <button class="letter btn btn-secondary">P</button>
+            </div>
+            <div class="row justify-content-center" id="row2">
+                    <button class="letter btn btn-secondary">A</button>
+                    <button class="letter btn btn-secondary">S</button>
+                    <button class="letter btn btn-secondary">D</button>
+                    <button class="letter btn btn-secondary">F</button>
+                    <button class="letter btn btn-secondary">G</button>
+                    <button class="letter btn btn-secondary">H</button>
+                    <button class="letter btn btn-secondary">J</button>
+                    <button class="letter btn btn-secondary">K</button>
+                    <button class="letter btn btn-secondary">L</button>
+            </div>
+            <div class="row justify-content-center" id="row3">
+                    <button class="letter btn btn-secondary">Z</button>
+                    <button class="letter btn btn-secondary">X</button>
+                    <button class="letter btn btn-secondary">C</button>
+                    <button class="letter btn btn-secondary">V</button>
+                    <button class="letter btn btn-secondary">B</button>
+                    <button class="letter btn btn-secondary">N</button>
+                    <button class="letter btn btn-secondary">M</button>
+            </div>
+            <div class="row justify-content-center">
+                    <button id="newGame" class="btn btn-primary">Start New Game!</button>
+            </div>
+        </div>
+        
+        
+ 
+    </body>
+        
+    
+    
+    
+       <script type="text/javascript">
+        $(document).ready(function() {
+            var misses = 0;
+            var strings = ["INDEX", "GOLDEN", "REDISCOVERING", "JAVASCRIPT",
+                               "COMMUNITY", "DOORBELL", "HANGMAN", "FOREST"];
+            var randomString = strings[Math.ceil(Math.random() * strings.length)];
+            var guessedString = [];
+
+            var i = 0;
+            for (i = 0; i < randomString.length; i++) {
+                guessedString[i] = "_";
+            }
+            $("#word").html("Word: " + guessedString.join(", ")); 
+
+            function initiate() {
+                misses = 0;
+                $("#body").attr('src', "images/base.png");
+                $("#misses").html("Misses: 0/7");
+                $(".letter").prop('disabled', false);
+                $("#finalMsg").html("");
+                randomString = strings[Math.ceil(Math.random() * strings.length)];
+
+                guessedString = [];
+
+                var i = 0;
+                for (i = 0; i < randomString.length; i++) {
+                    guessedString[i] = "_";
+                }
+                $("#word").html("Word: " + guessedString.join(", ")); 
+            }
+
+
+            $(".letter").click(function() {
+                console.log("Button pressed");
+                var guessedLetter = $(this).html();
+                $(this).prop('disabled', true);
+
+                if (randomString.indexOf(guessedLetter) > -1) {
+                    for (i = 0; i < randomString.length; i++) {
+                        if (randomString.charAt(i) == guessedLetter) {
+                            guessedString[i] = guessedLetter;
+                            
+                        }
+                        $("#word").html("Word: " + guessedString.join(", ")); 
+                    }
+                    if ($.inArray("_", guessedString) == -1) {
+                        //PRINT: "You Won! Press Start New Game to play again!"
+                        $("#finalMsg").html("You Won! Press Start New Game to play again!");
+                    }
+                } else {
+                        misses++;
+                        switch (misses) { 
+                        case 1: 
+                            $("#misses").html("Misses: 1/7");
+                            $("#body").attr('src', "images/miss1.png");
+                            break;
+                        case 2: 
+                            $("#misses").html("Misses: 2/7");
+                            $("#body").attr('src', "images/miss2.png");
+                            break
+                        case 3: 
+                            $("#misses").html("Misses: 3/7");
+                            $("#body").attr('src', "images/miss3.png");
+                            break
+                        case 4: 
+                            $("#misses").html("Misses: 4/7");
+                            $("#body").attr('src', "images/miss4.png");
+                            break;
+                        case 5: 
+                            $("#misses").html("Misses: 5/7");
+                            $("#body").attr('src', "images/miss5.png");
+                            break;
+                        case 6: 
+                            $("#misses").html("Misses: 6/7");
+                            $("#body").attr('src', "images/miss6.png");
+                            break;
+                        case 7: 
+                            $("#misses").html("Misses: 7/7");
+                            $("#body").attr('src', "images/miss7.png");
+                            $(".letter").prop('disabled', true);
+                            $("#finalMsg").html("You Lost! The word was " + randomString + ". Press Start New Game to play again!");
+                            break;
+                        default:
+                            alert('');
+                    }    
+                };
+
+                
+            });
+            $("#newGame").click(initiate);
+            
+        });
+    
+    
+        
+        
+        </script>
+</html>

@@ -1,0 +1,17 @@
+#finalMsg {
+    height: 25px;
+}
+
+#word {
+    font-size: 16pt;
+}
+.row-top-margin {
+    margin-top: 15px;
+}
+.letter {
+    margin: 5px;
+}
+img {
+    width: 300px;
+    height: 300px;
+}
