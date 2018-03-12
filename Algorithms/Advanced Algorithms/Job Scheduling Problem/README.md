@@ -1,8 +1,8 @@
 # Job Scheduling Problem
 
 Java Source files located in jobscheduler folder.
-  Driver: ScheduleDriver2.java
-  Source Code: JobScheduler.java
+  * Driver: ScheduleDriver2.java
+  * Source Code: JobScheduler.java
 
 Project Description: 
   Project 2.docx
